@@ -53,6 +53,7 @@ function Level3() {
 	document.getElementById('option1').innerHTML = 'Vraag of de wardens Guldan gezien hebben';
 	document.getElementById('option2').innerHTML = 'Vraag hulp aan de wardens';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
+	option2.setAttribute("onClick", "javascript:Level4();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
 }
@@ -60,6 +61,9 @@ function Level3() {
 function Level4() {
 	console.log("Level4:)");
 	document.getElementById('level_title').innerHTML = 'Level 4: Een plan';
+	document.getElementById('option1').innerHTML = 'Vraag of de wardens het eiland gescout hebben';
+	document.getElementById('option2').innerHTML = 'Vraag de leider om hulp met het plan bedenken';
+	document.getElementById('option3').innerHTML = 'Zeg niks';
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
@@ -73,3 +77,5 @@ function uitleg() {
 	document.body.style.backgroundImage = "url('img/uitleg.jpg')";
 	console.log(document.getElementById('option2').onclick);
 	document.getElementById('option2').style.visibility = 'hidden';}
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Je doel is om de kwade warlock Guldan te vinden en te verslaan om Azerot te redden. Jij(Archmage Khadgar) Moet spullen vinden, rond kijken en voor allies zoeken.';
