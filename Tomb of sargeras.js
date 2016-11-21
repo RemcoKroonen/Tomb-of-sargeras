@@ -41,8 +41,8 @@ function Level2() {
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').play();
-	/*var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';*/
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';
 
 }
 
@@ -53,12 +53,15 @@ function Level3() {
 	document.getElementById('option1').innerHTML = 'Vraag of de wardens Guldan gezien hebben';
 	document.getElementById('option2').innerHTML = 'Vraag hulp aan de wardens';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
-	/*var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';*/
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
 }
 
 function Level4() {
-	console.log("Level4: Naar de Tomb()");
+	console.log("Level4:)");
+	document.getElementById('level_title').innerHTML = 'Level 4: Een plan';
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
 
 
