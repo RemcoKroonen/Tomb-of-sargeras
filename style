@@ -1,0 +1,19 @@
+body {
+	background-image: url("img/Tomb of Sargeras.jpg");
+	font-family: sans-serif;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+/*-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;*/
+}
+
+#level_title {
+	font-size: 18px;
+	color: #336B87;		
+	font-weight: bold;
+}
+
+p {
+	color: #336B87;
+}
