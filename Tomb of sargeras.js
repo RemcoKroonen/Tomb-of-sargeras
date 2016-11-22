@@ -54,28 +54,41 @@ function Level3() {
 	document.getElementById('option2').innerHTML = 'Vraag hulp aan de wardens';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
 	option2.setAttribute("onClick", "javascript:Level4();");
+	option3.setAttribute("onClick", "javascript:level6();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
 }
 
 function Level4() {
-	console.log("Level4:)");
+	console.log("Level4())");
 	document.getElementById('level_title').innerHTML = 'Level 4: Een plan';
 	document.getElementById('option1').innerHTML = 'Vraag of de wardens het eiland gescout hebben';
 	document.getElementById('option2').innerHTML = 'Vraag de leider(Maeiv Shadowsong) om hulp met het plan bedenken';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
 	option1.setAttribute("onClick", "javascript:Level5();");
+	option3.setAttribute("onClick", "javascript:level6();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
 function Level5() {
-	console.log("Level4:)");
+	console.log("Level5())");
 	document.getElementById('level_title').innerHTML = 'Level 4: Scout report';
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'De wardens hebben het brandde wrak van het schip gevonden en een paar dode nightfallen maar zij vinden het geen teken dat Guldan hier is.';
 	/*alert("Praat weer met de wardens");*/
-}
 
+	option2.setAttribute("onClick", "javascript:Level4();");
+	document.getElementById('option2').innerHTML = 'praat weer met de wardens';
+}
+function level6() {
+	console.log("game over()");
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Je zegt niks en de wardens verlaten je zonder iets te zeggen. Je bent niks te weten gekomen over guldan and kan hem niet vinden. druk op F5 om opnieuw te beginnen.';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'hidden';
+}
 
 
 function uitleg() {
