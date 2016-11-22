@@ -62,10 +62,18 @@ function Level4() {
 	console.log("Level4:)");
 	document.getElementById('level_title').innerHTML = 'Level 4: Een plan';
 	document.getElementById('option1').innerHTML = 'Vraag of de wardens het eiland gescout hebben';
-	document.getElementById('option2').innerHTML = 'Vraag de leider om hulp met het plan bedenken';
+	document.getElementById('option2').innerHTML = 'Vraag de leider(Maeiv Shadowsong) om hulp met het plan bedenken';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
+	option1.setAttribute("onClick", "javascript:Level5();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
+}
+function Level5() {
+	console.log("Level4:)");
+	document.getElementById('level_title').innerHTML = 'Level 4: Scout report';
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'De wardens hebben het brandde wrak van het schip gevonden en een paar dode nightfallen maar zij vinden het geen teken dat Guldan hier is.';
+	/*alert("Praat weer met de wardens");*/
 }
 
 
