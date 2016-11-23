@@ -22,6 +22,9 @@ function Level1() {
 	document.getElementById('option3').innerHTML = 'Ga naar de toren van de wardens';
 	document.getElementById('option2').style.visibility = 'visible';
 	option3.setAttribute("onClick", "javascript:Level2();");
+	option2.setAttribute("onClick", "javascript:Level7();");
+	option1.setAttribute("onClick", "javascript:Level8();");
+
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').play();
 	document.getElementById('Nightsong').pause();
@@ -100,3 +103,25 @@ function uitleg() {
 	document.getElementById('option2').style.visibility = 'hidden';}
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Je doel is om de kwade warlock Guldan te vinden en te verslaan om Azerot te redden. Jij(Archmage Khadgar) Moet spullen vinden, rond kijken en voor allies zoeken.';
+
+function level7() {
+	console.log("game over()");
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'hidden';
+}
+function level8() {
+	console.log("game over()");
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	var tekst = document.getElementById('tekst')
+	tekst.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'visibility';
+	document.getElementById('option1').innerHTML = 'Ga terugn naar het begin';
+	document.body.style.backgroundImage = "url('img/tomb of sargeras 3.jpg')";
+
+}
