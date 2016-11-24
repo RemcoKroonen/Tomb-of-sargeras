@@ -22,8 +22,8 @@ function Level1() {
 	document.getElementById('option3').innerHTML = 'Ga naar de toren van de wardens';
 	document.getElementById('option2').style.visibility = 'visible';
 	option3.setAttribute("onClick", "javascript:Level2();");
-	option2.setAttribute("onClick", "javascript:Level7();");
-	option1.setAttribute("onClick", "javascript:Level8();");
+	option2.setAttribute("onClick", "javascript:level7();");
+	option1.setAttribute("onClick", "javascript:level8();");
 
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').play();
@@ -70,6 +70,7 @@ function Level4() {
 	document.getElementById('option3').innerHTML = 'Zeg niks';
 	option1.setAttribute("onClick", "javascript:Level5();");
 	option3.setAttribute("onClick", "javascript:level6();");
+	option3.setAttribute("onClick", "javascript:level9();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
@@ -120,8 +121,16 @@ function level8() {
 	tekst.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
-	document.getElementById('option1').style.visibility = 'visibility';
-	document.getElementById('option1').innerHTML = 'Ga terugn naar het begin';
+	document.getElementById('option1').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/tomb of sargeras 3.jpg')";
+
+}
+
+function level9() {
+	console.log("level9()");
+	document.getElementById('level_title').innerHTML = 'Level 5: Wat nu?';
+	document.getElementById('option1').innerHTML = 'Vraag of de wardens het eiland gescout hebben';
+	document.getElementById('option2').innerHTML = 'Vraag de leider(Maeiv Shadowsong) om hulp met het plan bedenken';
+	document.getElementById('option3').innerHTML = 'Zeg niks';
 
 }
