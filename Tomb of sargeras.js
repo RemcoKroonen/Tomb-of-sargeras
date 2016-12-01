@@ -70,7 +70,7 @@ function Level4() {
 	document.getElementById('option3').innerHTML = 'Zeg niks';
 	option1.setAttribute("onClick", "javascript:Level5();");
 	option3.setAttribute("onClick", "javascript:level6();");
-	option3.setAttribute("onClick", "javascript:level9();");
+	option2.setAttribute("onClick", "javascript:level9();");
 	var tekst = document.getElementById('tekst')
 	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
@@ -118,7 +118,7 @@ function level8() {
 	console.log("game over()");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
+	tekst.innerHTML = 'Je checkt of de tomb of sargeras nog steeds dicht is maar je verspilde je tijd daar en guldan is ontsnapt.';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
@@ -130,7 +130,26 @@ function level9() {
 	console.log("level9()");
 	document.getElementById('level_title').innerHTML = 'Level 5: Wat nu?';
 	document.getElementById('option1').innerHTML = 'Vraag of de wardens het eiland gescout hebben';
-	document.getElementById('option2').innerHTML = 'Vraag de leider(Maeiv Shadowsong) om hulp met het plan bedenken';
+	document.getElementById('option2').innerHTML = 'Vraag Maeiv Shadowsong(de leider) of hier nog iets gebeurt is.';
 	document.getElementById('option3').innerHTML = 'Zeg niks';
+	option2.setAttribute("onClick", "javascript:level10();");
 
 }
+function level10() {
+	console.log("level10()");
+	document.getElementById('level_title').innerHTML = 'Level 6: geen hulp of nieuws';
+	document.getElementById('option1').innerHTML = 'Probeer Maeiv Shadowsong te overtuigen om te helpen.';
+	document.getElementById('option2').innerHTML = 'Volg de wardens naar hun basis';
+	document.getElementById('option3').innerHTML = 'Ga naar het geluid toe';
+	tekst.innerHTML = 'De wardens geven jouw de schuld dat jij Guldan nog niet gestopt hebt en gaan ervan uit dat hij hun basis gaat aanvallen. Ze staan dus op het punt van weg te gaan. Jij kreegt dus geen hulp. Je hoort ook een geluid van de tomb of sargeras komen.';
+	option3.setAttribute("onClick", "javascript:level11();");
+}
+function level11() {
+	console.log("level11()");
+	document.getElementById('level_title').innerHTML = 'Level 7: the chase begins';
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').play();
+}
+
