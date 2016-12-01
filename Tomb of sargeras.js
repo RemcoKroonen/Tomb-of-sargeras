@@ -151,5 +151,6 @@ function level11() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 }
 
