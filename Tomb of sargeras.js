@@ -5,7 +5,7 @@ document.getElementById('option3').style.visibility = 'hidden';
 document.getElementById('option3').innerHTML = 'Level2';
 console.log(document.getElementById('option2').onclick);
 
-
+var HasArcaneBindings = false;
 
 function Level1() {
 	console.log("Level1()");
@@ -152,5 +152,14 @@ function level11() {
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
-}
 
+}
+function level12() {
+	console.log("level12()");
+	document.getElementById('level_title').innerHTML = 'Level 8: het padl';
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').play();
+	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
+}
