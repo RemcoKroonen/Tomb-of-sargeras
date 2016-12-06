@@ -147,19 +147,62 @@ function level10() {
 function level11() {
 	console.log("level11()");
 	document.getElementById('level_title').innerHTML = 'Level 7: the chase begins';
+	document.getElementById('option1').innerHTML = 'Ga de tomb in.';
+	document.getElementById('option2').innerHTML = 'Kijk naar de stukken van de ingang voor aanwijzingen';
+	document.getElementById('option3').innerHTML = '';
+	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	tekst.innerHTML = 'Als je weer terug bent bij de tomb of sargeras, zie je dat de ingang kapot is geblazen en je voelt de aanwezigheid van Guldan al binnen in de tomb.'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 
 }
 function level12() {
 	console.log("level12()");
-	document.getElementById('level_title').innerHTML = 'Level 8: het padl';
+	document.getElementById('level_title').innerHTML = 'Level 8: het pad';
+	document.getElementById('option1').innerHTML = 'Kijk rond voor sporen van Guldan';
+	document.getElementById('option2').innerHTML = 'Volg de wardens naar hun basis';
+	document.getElementById('option3').innerHTML = 'Ga naar het geluid toe';
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	tekst.innerHTML = 'Als je weer terug bent bij de tomb of sargeras, zie je dat de ingang kapot is geblazen en je voelt de aanwezigheid van Guldan al binnen in de tomb.'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
+}
+function level13() {
+	console.log("level13()");
+	document.getElementById('level_title').innerHTML = 'Level 9: het duel';
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').play();
+	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
+}
+function level14() {
+	console.log("level14()");
+	document.getElementById('level_title').innerHTML = 'Level 10: uitleg';
+	document.getElementById('option1').innerHTML = 'Probeer Maeiv Shadowsong te overtuigen om te helpen.';
+	document.getElementById('option2').innerHTML = 'Volg de wardens naar hun basis';
+	document.getElementById('option3').innerHTML = 'Ga naar het geluid toe';
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').play();
+	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
+}
+function level15() {
+	console.log("level15()");
+	document.getElementById('level_title').innerHTML = 'Level 11: verloren?';
+	document.getElementById('option1').innerHTML = 'Vraag Maeiv waarom ze terug is gekomen.';
+	document.getElementById('option2').innerHTML = 'Probeer een ander pad te vinden naar Guldan';
+	document.getElementById('option3').innerHTML = 'Ga naar het geluid toe';
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').play();
+	tekst.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
+	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
