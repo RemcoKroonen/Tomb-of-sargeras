@@ -156,7 +156,7 @@ function level10() {
 	option2.innerHTML = 'Volg de wardens naar hun basis';
 	option3.innerHTML = 'Ga naar het geluid toe';
 	option3.setAttribute("onClick", "javascript:level11();");
-
+	option2.setAttribute("onClick", "javascript:level16();");
 	var tekst
 	tekst.innerHTML = 'De wardens geven jouw de schuld dat jij Guldan nog niet gestopt hebt en gaan ervan uit dat hij hun basis gaat aanvallen. Ze staan dus op het punt van weg te gaan. Jij kreegt dus geen hulp. Je hoort ook een geluid van de tomb of sargeras komen.';
 	option3.setAttribute("onClick", "javascript:level11();");
@@ -167,6 +167,7 @@ function level11() {
 	option1.innerHTML = 'Ga de tomb in.';
 	option2.innerHTML = 'Kijk naar de stukken van de ingang voor aanwijzingen';
 	option3.innerHTML = 'Wacht op versterking';
+	option1.setAttribute("onClick", "javascript:level12();");
 
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('tomb').pause();
@@ -194,6 +195,8 @@ function level12() {
 function level13() {
 	console.log("level13()");
 	document.getElementById('level_title').innerHTML = 'Level 9: het duel';
+	option3.innerHTML = 'hoi'
+	option3.setAttribute("onClick", "javascript:level14();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
@@ -204,13 +207,15 @@ function level13() {
 function level14() {
 	console.log("level14()");
 	document.getElementById('level_title').innerHTML = 'Level 10: uitleg';
-	option1.innerHTML = 'Probeer Maeiv Shadowsong te overtuigen om te helpen.';
-	option2.innerHTML = 'Volg de wardens naar hun basis';
-	option3.innerHTML = 'Ga naar het geluid toe';
+	option1.innerHTML = 'Daag Guldan uit.';
+	option2.innerHTML = 'Ga terug naar buiten.';
+	option3.innerHTML = 'Maak arcane elementals en laat ze de kamer doorzoeken.';
+	option3.setAttribute("onClick", "javascript:level15();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	tekst.innerHTML = '.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
 function level15() {
@@ -219,10 +224,30 @@ function level15() {
 	option1.innerHTML = 'Vraag Maeiv waarom ze terug is gekomen.';
 	option2.innerHTML = 'Probeer een ander pad te vinden naar Guldan';
 	option3.innerHTML = 'Geef het op en trek terug';
+	option3.setAttribute("onClick", "javascript:level17();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
 	tekst.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
+}
+function level16() {
+	console.log("level16()");
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'hidden';
+	document.body.style.backgroundImage = "url('img/wardens1.jpg')";
+	tekst.innerHTML = 'je volgt de wardens naar hun basis maar wordt gevangengenomen. Druk op F5 om opnieuw te beginnen'
+
+}
+function level17() {
+	console.log("level17()");
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'hidden';
+	document.body.style.backgroundImage = "url('img/dalaran.jpg')";
+	tekst.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran guldan ontsnapt.'
 }
