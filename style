@@ -14,6 +14,13 @@ background-size: cover;*/
 	font-weight: bold;
 }
 
-p {
+#teksteen{
 	color: #336B87;
+}
+#tekstdrie{
+	color: ;
+}
+
+#teksttwee{
+	color: #5C821A;
 }

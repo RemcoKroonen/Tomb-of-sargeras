@@ -9,6 +9,9 @@ var HasArcaneBindings = false;
 var option1 = document.getElementById('option1');
 var option2	= document.getElementById('option2');
 var option3 = document.getElementById('option3');
+var teksteen = document.getElementById('teksteen');
+var teksttwee =	document.getElementById('teksttwee');
+var tekstdrie = document.getElementById('tekstdrie');
 
 function Level1() {
 	console.log("Level1()");
@@ -21,9 +24,7 @@ function Level1() {
 
 	console.log(document.getElementById('option2').onclick);
 	document.body.style.backgroundImage = "url('img/screenshot2.jpg')";
-
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraakt';
+	teksteen.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraakt';
 	document.getElementById('option2').style.visibility = 'visible';
 	option3.setAttribute("onClick", "javascript:Level2();");
 	option2.setAttribute("onClick", "javascript:level7();");
@@ -48,11 +49,12 @@ function Level2() {
 
 
 	option2.setAttribute("onClick", "javascript:Level3();");
+	option3.setAttribute("onclick", "javascript:level19();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').play();
 	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';
+	teksteen.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';
 
 }
 
@@ -68,7 +70,7 @@ function Level3() {
 	option2.setAttribute("onClick", "javascript:Level4();");
 	option3.setAttribute("onClick", "javascript:level6();");
 	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
+	teksteen.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
 }
 
 function Level4() {
@@ -113,8 +115,7 @@ function uitleg() {
 	document.body.style.backgroundImage = "url('img/uitleg.jpg')";
 	console.log(document.getElementById('option2').onclick);
 	document.getElementById('option2').style.visibility = 'hidden';}
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je doel is om de kwade warlock Guldan te vinden en te verslaan om Azerot te redden. Jij(Archmage Khadgar) Moet spullen vinden, rond kijken en voor allies zoeken.';
+	teksttwee.innerHTML = 'Je doel is om de kwade warlock Guldan te vinden en te verslaan om Azerot te redden. Jij(Archmage Khadgar) Moet spullen vinden, rond kijken en voor allies zoeken.';
 
 function level7() {
 	console.log("game over()");
@@ -168,12 +169,11 @@ function level11() {
 	option2.innerHTML = 'Kijk naar de stukken van de ingang voor aanwijzingen';
 	option3.innerHTML = 'Wacht op versterking';
 	option1.setAttribute("onClick", "javascript:level12();");
-
-	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	var tekst
 	tekst.innerHTML = 'Als je weer terug bent bij de tomb of sargeras, zie je dat de ingang kapot is geblazen en je voelt de aanwezigheid van Guldan al binnen in de tomb.'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 
@@ -183,13 +183,15 @@ function level12() {
 	document.getElementById('level_title').innerHTML = 'Level 8: het pad';
 	option1.innerHTML = 'Kijk rond voor sporen van Guldan';
 	option2.innerHTML = 'Volg de wardens naar hun basis';
-	option3.innerHTML = 'Ga naar het geluid toe';
+	option3.innerHTML = 'Volg de vallen naar Guldan ';
+	option3.setAttribute("onClick", "javascript:level13();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
 
-	tekst.innerHTML = 'Als je de tomb of sargeras in loopt stap je bijna op een val maar je kan het maar net ontwijken.'
+	var tekst
+	tekst.innerHTML = 'Als je de tomb of sargeras in loopt stap je bijna op een val maar je kan het maar net ontwijken. De vallen zelf zijn snel neergelegd bijna of Guldan haast heeft'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 }
 function level13() {
@@ -215,6 +217,7 @@ function level14() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	var tekst
 	tekst.innerHTML = '.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
@@ -225,10 +228,12 @@ function level15() {
 	option2.innerHTML = 'Probeer een ander pad te vinden naar Guldan';
 	option3.innerHTML = 'Geef het op en trek terug';
 	option3.setAttribute("onClick", "javascript:level17();");
+	option1.setAttribute("onClick", "javascript:level18();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	var tekst
 	tekst.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
@@ -239,6 +244,7 @@ function level16() {
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/wardens1.jpg')";
+	var tekst
 	tekst.innerHTML = 'je volgt de wardens naar hun basis maar wordt gevangengenomen. Druk op F5 om opnieuw te beginnen'
 
 }
@@ -249,5 +255,24 @@ function level17() {
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/dalaran.jpg')";
-	tekst.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran guldan ontsnapt.'
+	var tekst
+	tekst.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran en guldan ontsnapt.'
+}
+function level18() {
+	console.log("level18()");
+	document.getElementById('level_title').innerHTML = 'The warden'
+	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
+	var tekst
+	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
+	option2.innerHTML = ''
+	tekst.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
+
+
+}
+function level19() {
+	console.log("level19()");
+	document.getElementById('level_title').innerHTML = 'de warden tower'
+	tekst.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
+	document.body.style.backgroundImage = "url('img/tower2.jpg')"
+
 }
