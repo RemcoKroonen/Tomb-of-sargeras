@@ -195,6 +195,8 @@ function level13() {
 	document.getElementById('chase').pause();
 
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
+
+	//eerste game naar 3 raak naar level 10//
 }
 function level14() {
 	console.log("level14()");
@@ -250,9 +252,12 @@ function level18() {
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
 	option2.innerHTML = 'ga samen terug naar dalaran.'
+	option3.innerHTML = 'test'
 	option1.setAttribute("onclick", "javascript:level22();");
-	teksteen.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
 	option2.setAttribute("onClick", "javascript:level17();");
+	option3.setAttribute("onClick", "javascript:level24();");
+	teksteen.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
+		
 
 
 }
@@ -265,13 +270,13 @@ function level19() {
 	option1.setAttribute("onClick", "javascript:Level2();");
 	option2.setAttribute("onClick", "javascript:Level20();");
 	document.getElementById('option3').style.visibility = 'hidden';
-	
+
 	document.body.style.backgroundImage = "url('img/tower2.jpg')"
 
 }
 function level20() {
 	console.log("level20()");
-	document.getElementById('level_title').innerHTML = 'de warden tower'
+	document.getElementById('level_title').innerHTML = 'de warden tower: trap'
 	option1.innerHTML = 'ga naar de top.'
 	option1.setAttribute("onClick", "javascript:Level21();");
 	option2.innerHTML = 'ga naar de begane grond weer.'
@@ -280,7 +285,7 @@ function level20() {
 }
 function level21() {
 	console.log("level21()");
-	document.getElementById('level_title').innerHTML = 'de warden tower'
+	document.getElementById('level_title').innerHTML = 'de warden tower:top'
 	option1.innerHTML = 'ga naar de begane grond weer.'
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/towervier.jpg')"
@@ -289,12 +294,17 @@ function level22() {
 	console.log("level22()");
 	document.getElementById('level_title').innerHTML = 'alles of niets'
 
+	//laatste game daarna naar function 23//
+
 }
 function level23() {
 	console.log("level23()");
 	document.getElementById('level_title').innerHTML = 'ontsnappen, gewonnen maar ook deels verloren'
-	document.body.style.backgroundImage = "url('img/.jpg')"
-
+	document.body.style.backgroundImage = "url('img/tomb.jpg')"
+	option1.innerHTML = 'Ontsnap en waarschuw de leiders van azeroth.'
+	option2.innerHTML = 'Probeer de legion te stoppen.'
+	option3.innerHTML = 'probeer het portaal te dichten.'
+	teksteen.innerHTML= 'Zelfs met Maeivs hulp lukt het niet om Guldan te stoppen en hij opent een portaal voor de legion om azeroth aan te vallen.'
 }
 
 
@@ -302,8 +312,8 @@ function level24() {
 	console.log("level24()");
 	document.getElementById('level_title').innerHTML = 'Credits'
 	teksteen.innerHTML = 'Bedankt voor het proberen/spelen van mijn adventure game. deze game is gebaseerd op het audio drama van blizzard ent. Ik heb het verhaal verkort om het niet te lang te maken. De button die nog over is gaat de afspeelijst als het hele verhaal wilt horen.'
-	
-	document.body.style.backgroundImage = "url('img/legionicon.png')"
+	option1.innerHTML = 'Knop naar afspeelijst: tomb of sargeras.'
+	document.body.style.backgroundImage = "url('img/khadgar 2.jpg')"
 }
 
 
