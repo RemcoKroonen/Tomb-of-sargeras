@@ -24,12 +24,13 @@ function Level1() {
 
 	console.log(document.getElementById('option2').onclick);
 	document.body.style.backgroundImage = "url('img/screenshot2.jpg')";
-	teksteen.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraakt';
+	teksteen.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraak. je moet hem nu vinden en stoppen';
 	document.getElementById('option2').style.visibility = 'visible';
 	option3.setAttribute("onClick", "javascript:Level2();");
 	option2.setAttribute("onClick", "javascript:level7();");
 	option1.setAttribute("onClick", "javascript:level8();");
 
+	document.getElementById('teksttwee'). style.visibility = 'hidden';
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').play();
 	document.getElementById('Nightsong').pause();
@@ -53,7 +54,6 @@ function Level2() {
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').play();
-	var tekst = document.getElementById('tekst')
 	teksteen.innerHTML = 'Je ziet in de verte een toren van de wardens staan. Als je in de buurt komt zie je ook een groep van Wardens staan.';
 
 }
@@ -69,7 +69,6 @@ function Level3() {
 
 	option2.setAttribute("onClick", "javascript:Level4();");
 	option3.setAttribute("onClick", "javascript:level6();");
-	var tekst = document.getElementById('tekst')
 	teksteen.innerHTML = 'Misschien kunnen de wardens helpen met het zoeken naar Guldan? denk je.';
 }
 
@@ -84,14 +83,12 @@ function Level4() {
 	option1.setAttribute("onClick", "javascript:Level5();");
 	option3.setAttribute("onClick", "javascript:level6();");
 	option2.setAttribute("onClick", "javascript:level9();");
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
+	teksteen.innerHTML = 'Nu de Wardens tenmisten met je praten kan je misschien een plan gaan bedenken.';
 }
 function Level5() {
 	console.log("Level5())");
 	document.getElementById('level_title').innerHTML = 'Level 4: Scout report';
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'De wardens hebben het brandde wrak van het schip gevonden en een paar dode nightfallen maar zij vinden het geen teken dat Guldan hier is.';
+	teksteen.innerHTML = 'De wardens hebben het brandde wrak van het schip gevonden en een paar dode nightfallen maar zij vinden het geen teken dat Guldan hier is.';
 	/*alert("Praat weer met de wardens");*/
 
 	option2.setAttribute("onClick", "javascript:Level4();");
@@ -100,8 +97,7 @@ function Level5() {
 function level6() {
 	console.log("game over()");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je zegt niks en de wardens verlaten je zonder iets te zeggen. Je bent niks te weten gekomen over guldan and kan hem niet vinden. druk op F5 om opnieuw te beginnen.';
+	teksteen.innerHTML = 'Je zegt niks en de wardens verlaten je zonder iets te zeggen. Je bent niks te weten gekomen over guldan and kan hem niet vinden. druk op F5 om opnieuw te beginnen.';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
@@ -120,8 +116,7 @@ function uitleg() {
 function level7() {
 	console.log("game over()");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
+	teksteen.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
@@ -129,8 +124,7 @@ function level7() {
 function level8() {
 	console.log("game over()");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
-	var tekst = document.getElementById('tekst')
-	tekst.innerHTML = 'Je checkt of de tomb of sargeras nog steeds dicht is maar je verspilde je tijd daar en guldan is ontsnapt.';
+	teksteen.innerHTML = 'Je checkt of de tomb of sargeras nog steeds dicht is maar je verspilde je tijd daar en guldan is ontsnapt.';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
@@ -158,8 +152,7 @@ function level10() {
 	option3.innerHTML = 'Ga naar het geluid toe';
 	option3.setAttribute("onClick", "javascript:level11();");
 	option2.setAttribute("onClick", "javascript:level16();");
-	var tekst
-	tekst.innerHTML = 'De wardens geven jouw de schuld dat jij Guldan nog niet gestopt hebt en gaan ervan uit dat hij hun basis gaat aanvallen. Ze staan dus op het punt van weg te gaan. Jij kreegt dus geen hulp. Je hoort ook een geluid van de tomb of sargeras komen.';
+	teksteen.innerHTML = 'De wardens geven jouw de schuld dat jij Guldan nog niet gestopt hebt en gaan ervan uit dat hij hun basis gaat aanvallen. Ze staan dus op het punt van weg te gaan. Jij kreegt dus geen hulp. Je hoort ook een geluid van de tomb of sargeras komen.';
 	option3.setAttribute("onClick", "javascript:level11();");
 }
 function level11() {
@@ -173,8 +166,7 @@ function level11() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
-	var tekst
-	tekst.innerHTML = 'Als je weer terug bent bij de tomb of sargeras, zie je dat de ingang kapot is geblazen en je voelt de aanwezigheid van Guldan al binnen in de tomb.'
+	teksteen.innerHTML = 'Als je weer terug bent bij de tomb of sargeras, zie je dat de ingang kapot is geblazen en je voelt de aanwezigheid van Guldan al binnen in de tomb.'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 
 }
@@ -189,9 +181,7 @@ function level12() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
-
-	var tekst
-	tekst.innerHTML = 'Als je de tomb of sargeras in loopt stap je bijna op een val maar je kan het maar net ontwijken. De vallen zelf zijn snel neergelegd bijna of Guldan haast heeft'
+	teksteen.innerHTML = 'Als je de tomb of sargeras in loopt stap je bijna op een val maar je kan het maar net ontwijken. De vallen zelf zijn snel neergelegd bijna of Guldan haast heeft'
 	document.body.style.backgroundImage = "url('img/tombart2.jpg')";
 }
 function level13() {
@@ -217,8 +207,7 @@ function level14() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
-	var tekst
-	tekst.innerHTML = '.'
+	teksteen.innerHTML = '.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
 function level15() {
@@ -233,8 +222,7 @@ function level15() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
-	var tekst
-	tekst.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
+	teksteen.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
 function level16() {
@@ -244,8 +232,7 @@ function level16() {
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/wardens1.jpg')";
-	var tekst
-	tekst.innerHTML = 'je volgt de wardens naar hun basis maar wordt gevangengenomen. Druk op F5 om opnieuw te beginnen'
+	teksteen.innerHTML = 'je volgt de wardens naar hun basis maar wordt gevangengenomen. Druk op F5 om opnieuw te beginnen'
 
 }
 function level17() {
@@ -255,24 +242,68 @@ function level17() {
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.getElementById('option1').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/dalaran.jpg')";
-	var tekst
-	tekst.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran en guldan ontsnapt.'
+	teksteen.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran en guldan ontsnapt.'
 }
 function level18() {
 	console.log("level18()");
 	document.getElementById('level_title').innerHTML = 'The warden'
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
-	var tekst
 	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
-	option2.innerHTML = ''
-	tekst.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
+	option2.innerHTML = 'ga samen terug naar dalaran.'
+	option1.setAttribute("onclick", "javascript:level22();");
+	teksteen.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
+	option2.setAttribute("onClick", "javascript:level17();");
 
 
 }
 function level19() {
 	console.log("level19()");
 	document.getElementById('level_title').innerHTML = 'de warden tower'
-	tekst.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
+	teksteen.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
+	option1.innerHTML = 'Ga terug naar buiten'
+	option2.innerHTML = 'ga de trap op.'
+	option1.setAttribute("onClick", "javascript:Level2();");
+	option2.setAttribute("onClick", "javascript:Level20();");
+	document.getElementById('option3').style.visibility = 'hidden';
+	
 	document.body.style.backgroundImage = "url('img/tower2.jpg')"
 
 }
+function level20() {
+	console.log("level20()");
+	document.getElementById('level_title').innerHTML = 'de warden tower'
+	option1.innerHTML = 'ga naar de top.'
+	option1.setAttribute("onClick", "javascript:Level21();");
+	option2.innerHTML = 'ga naar de begane grond weer.'
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.body.style.backgroundImage = "url('img/trap.jpg')"
+}
+function level21() {
+	console.log("level21()");
+	document.getElementById('level_title').innerHTML = 'de warden tower'
+	option1.innerHTML = 'ga naar de begane grond weer.'
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.body.style.backgroundImage = "url('img/towervier.jpg')"
+}
+function level22() {
+	console.log("level22()");
+	document.getElementById('level_title').innerHTML = 'alles of niets'
+
+}
+function level23() {
+	console.log("level23()");
+	document.getElementById('level_title').innerHTML = 'ontsnappen, gewonnen maar ook deels verloren'
+	document.body.style.backgroundImage = "url('img/.jpg')"
+
+}
+
+
+function level24() {
+	console.log("level24()");
+	document.getElementById('level_title').innerHTML = 'Credits'
+	teksteen.innerHTML = 'Bedankt voor het proberen/spelen van mijn adventure game. deze game is gebaseerd op het audio drama van blizzard ent. Ik heb het verhaal verkort om het niet te lang te maken. De button die nog over is gaat de afspeelijst als het hele verhaal wilt horen.'
+	
+	document.body.style.backgroundImage = "url('img/legionicon.png')"
+}
+
+

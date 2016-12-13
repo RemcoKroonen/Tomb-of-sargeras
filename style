@@ -18,9 +18,12 @@ background-size: cover;*/
 	color: #336B87;
 }
 #tekstdrie{
-	color: ;
+	color: #D13525;
 }
 
 #teksttwee{
 	color: #5C821A;
 }
+/*#option1{
+	color: #486824;
+}*/
