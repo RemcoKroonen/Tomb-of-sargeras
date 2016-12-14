@@ -48,7 +48,7 @@ function Level2() {
 	option2.innerHTML = 'Praat met de wardens';
 	option3.innerHTML = 'Kijk in de toren ';
 
-
+	option1.setAttribute("onClick", "javascript:kijkrond();");
 	option2.setAttribute("onClick", "javascript:Level3();");
 	option3.setAttribute("onclick", "javascript:level19();");
 	document.getElementById('tomb').pause();
@@ -93,6 +93,7 @@ function Level5() {
 
 	option2.setAttribute("onClick", "javascript:Level4();");
 	document.getElementById('option2').innerHTML = 'praat weer met de wardens';
+
 }
 function level6() {
 	console.log("game over()");
@@ -248,14 +249,14 @@ function level17() {
 }
 function level18() {
 	console.log("level18()");
-	document.getElementById('level_title').innerHTML = 'The warden'
+	document.getElementById('level_title').innerHTML = 'Level 12:The warden'
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
 	option2.innerHTML = 'ga samen terug naar dalaran.'
 	option3.innerHTML = 'test'
 	option1.setAttribute("onclick", "javascript:level22();");
 	option2.setAttribute("onClick", "javascript:level17();");
-	option3.setAttribute("onClick", "javascript:level24();");
+	option3.setAttribute("onClick", "javascript:level23();");
 	teksteen.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
 		
 
@@ -263,48 +264,49 @@ function level18() {
 }
 function level19() {
 	console.log("level19()");
-	document.getElementById('level_title').innerHTML = 'de warden tower'
-	teksteen.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
-	option1.innerHTML = 'Ga terug naar buiten'
-	option2.innerHTML = 'ga de trap op.'
+	document.getElementById('level_title').innerHTML = 'de warden tower';
+	option1.innerHTML = 'Ga terug naar buiten';
+	option2.innerHTML = 'ga de trap op.';
+	option3.innerHTML = 'pak de arcane bindings op.'
 	option1.setAttribute("onClick", "javascript:Level2();");
 	option2.setAttribute("onClick", "javascript:Level20();");
-	document.getElementById('option3').style.visibility = 'hidden';
-
-	document.body.style.backgroundImage = "url('img/tower2.jpg')"
-
+	document.body.style.backgroundImage = "url('img/tower2.jpg')";
+	teksteen.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
 }
 function level20() {
 	console.log("level20()");
-	document.getElementById('level_title').innerHTML = 'de warden tower: trap'
-	option1.innerHTML = 'ga naar de top.'
+	document.getElementById('level_title').innerHTML = 'de warden tower:trap';
+	option1.innerHTML = 'ga naar de top.';
+	option2.innerHTML = 'ga naar de begane grond weer.';
 	option1.setAttribute("onClick", "javascript:Level21();");
-	option2.innerHTML = 'ga naar de begane grond weer.'
-	document.getElementById('option3').style.visibility = 'hidden';
-	document.body.style.backgroundImage = "url('img/trap.jpg')"
+	option2.setAttribute("onClick", "javascript:Level19();");
+	document.body.style.backgroundImage = "url('img/trap.jpg')";
 }
 function level21() {
 	console.log("level21()");
-	document.getElementById('level_title').innerHTML = 'de warden tower:top'
-	option1.innerHTML = 'ga naar de begane grond weer.'
-	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('level_title').innerHTML = 'de warden tower:top';
+	option1.innerHTML = 'ga naar de begane grond weer.';
+	option1.setAttribute("onclick", "javascript: level19");
 	document.body.style.backgroundImage = "url('img/towervier.jpg')"
 }
 function level22() {
 	console.log("level22()");
-	document.getElementById('level_title').innerHTML = 'alles of niets'
+	document.getElementById('level_title').innerHTML = 'level 13:alles of niets'
+	option3.innerHTML = 'test'
+	option3.setAttribute("onClick", "javascript:level23();");
 
 	//laatste game daarna naar function 23//
 
 }
 function level23() {
 	console.log("level23()");
-	document.getElementById('level_title').innerHTML = 'ontsnappen, gewonnen maar ook deels verloren'
+	document.getElementById('level_title').innerHTML = 'Level 14:ontsnappen, gewonnen maar ook deels verloren'
 	document.body.style.backgroundImage = "url('img/tomb.jpg')"
 	option1.innerHTML = 'Ontsnap en waarschuw de leiders van azeroth.'
 	option2.innerHTML = 'Probeer de legion te stoppen.'
 	option3.innerHTML = 'probeer het portaal te dichten.'
 	teksteen.innerHTML= 'Zelfs met Maeivs hulp lukt het niet om Guldan te stoppen en hij opent een portaal voor de legion om azeroth aan te vallen.'
+	option1.setAttribute("onClick", "javascript:level24();");
 }
 
 
@@ -315,5 +317,11 @@ function level24() {
 	option1.innerHTML = 'Knop naar afspeelijst: tomb of sargeras.'
 	document.body.style.backgroundImage = "url('img/khadgar 2.jpg')"
 }
-
-
+function kijkrond() {
+	console.log("kijkrond");
+	document.getElementById('level_title').innerHTML = 'rond kijken'
+	option1.innerHTML - 'Terug naar de wardens';
+	teksteen.innerHTML = 'Als je rond kijk voel je voor een second dat er iets in de buur was maar nu weg is.';
+	option1.setAttribute("onClick", "javascript:level2();");
+	document.body.style.backgroundImage = "url('img/val.jpg')"
+}
