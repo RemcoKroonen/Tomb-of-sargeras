@@ -220,12 +220,18 @@ function level12() {
 function level13() {
 	console.log("Level13()");
 	document.getElementById('level_title').innerHTML = 'level 9: het duel';
-	option3.innerHTML = 'hoi'
-	option3.setAttribute("onClick", "javascript:level14();");
+	option1.innerHTML = 'Val Guldan met arcane magic aan.'
+	option2.innerHTML = 'Kijk wat Guldan aan het doen is.'
+	option3.innerHTML = 'probeer Guldan te verassen.'
+	option1.setAttribute("onClick", "javascript:arcane();");
+	option2.setAttribute("onClick", "javascript:kijken();");
+	option3.setAttribute("onClick", "javascript:verassen();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').pause();
+	document.getElementById('option3').style.visibility = 'visible';
+	document.getElementById('option2').style.visibility = 'visible';
 
 	document.body.style.backgroundImage = "url('img/gevecht.jpg')";
 
@@ -238,11 +244,15 @@ function level14() {
 	option2.innerHTML = 'Ga terug naar buiten.';
 	option3.innerHTML = 'Maak arcane elementals en laat ze de kamer doorzoeken.';
 	option3.setAttribute("onClick", "javascript:level15();");
+	option2.setAttribute("onClick", "javascript:terug();");
+	option1.setAttribute("onClick", "javascript:uitdagen();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
-	teksteen.innerHTML = '.'
+	document.getElementById('option3').style.visibility = 'visible';
+	document.getElementById('option2').style.visibility = 'visible';
+	teksteen.innerHTML = 'Na een tijd vechten verdwijnt Guldan door een onzichtbaarheids spel te casten maar hij gaat door met de runes te vernietigen.'
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
 function level15() {
@@ -252,13 +262,16 @@ function level15() {
 	option2.innerHTML = 'Probeer een ander pad te vinden naar Guldan';
 	option3.innerHTML = 'Geef het op en trek terug';
 	option3.setAttribute("onClick", "javascript:level17();");
+	option2.setAttribute("onClick", "javascript:weg();");
 	option1.setAttribute("onClick", "javascript:level18();");
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').play();
+	document.getElementById('option3').style.visibility = 'visible';
+	document.getElementById('option2').style.visibility = 'visible';
 	teksteen.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
-	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
+	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 }
 function level16() {
 	console.log("Level16()");
@@ -285,10 +298,11 @@ function level18() {
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
 	option2.innerHTML = 'ga samen terug naar dalaran.'
-	option3.innerHTML = 'test'
+	document.getElementById('option3').style.visibility = 'hidden';
 	option1.setAttribute("onclick", "javascript:level22();");
 	option2.setAttribute("onClick", "javascript:level17();");
-	option3.setAttribute("onClick", "javascript:level23();");
+	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
+	
 	teksteen.innerHTML = 'Maeiv is teruggekomen omdat ze wist dat dit zo gebeuren maar nu is ze hier om te helpen.'
 		
 
@@ -327,8 +341,15 @@ function level21() {
 function level22() {
 	console.log("Level22()");
 	document.getElementById('level_title').innerHTML = 'level 13:alles of niets'
-	option3.innerHTML = 'test'
-	option3.setAttribute("onClick", "javascript:level23();");
+	option1.innerHTML = 'Kijk of je de runes weer kan maken.'
+	option2.innerHTML = 'Blijf door vechten.'
+	option3.innerHTML = 'probeer Guldan te bevriezen.'
+	option2.setAttribute("onClick", "javascript:level23();");
+	option1.setAttribute("onClick", "javascript:runes();");
+	option3.setAttribute("onClick", "javascript:bevriezen();");
+	document.getElementById('option3').style.visibility = 'visible';
+	document.body.style.backgroundImage = "url('img/statue.jpg')";
+	teksteen.innerHTML = 'Guldan is op een of andere manier sterker geworden en zelfs met Maeivs hulp kan je hem niet verslaan. En bijna alle runes zijn weg.'
 
 	//laatste game daarna naar function 23//
 
@@ -342,14 +363,18 @@ function level23() {
 	option3.innerHTML = 'probeer het portaal te dichten.'
 	teksteen.innerHTML= 'Zelfs met Maeivs hulp lukt het niet om Guldan te stoppen en hij opent een portaal voor de legion om azeroth aan te vallen.'
 	option1.setAttribute("onClick", "javascript:level24();");
+	option2.setAttribute("onClick", "javascript:legion();");
+	option3.setAttribute("onClick", "javascript:portaal();");
 }
 
 
 function level24() {
 	console.log("Level24()");
 	document.getElementById('level_title').innerHTML = 'Credits'
-	teksteen.innerHTML = 'Bedankt voor het proberen/spelen van mijn adventure game. deze game is gebaseerd op het audio drama van blizzard ent. Ik heb het verhaal verkort om het niet te lang te maken. De button die nog over is gaat de afspeelijst als het hele verhaal wilt horen.'
+	teksteen.innerHTML = 'De leiders van azeroth zijn gewaarschuwed.Bedankt voor het proberen/spelen van mijn adventure game. deze game is gebaseerd op het audio drama van blizzard ent. Ik heb het verhaal verkort om het niet te lang te maken. De button die nog over is gaat de afspeelijst als het hele verhaal wilt horen.'
 	option1.innerHTML = 'Knop naar afspeelijst: tomb of sargeras.'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
 	document.body.style.backgroundImage = "url('img/khadgar 2.jpg')"
 }
 function kijkrond() {
@@ -431,7 +456,97 @@ function rondkijken(){
 	teksteen.innerHTML = 'De tomb of sargeras zelf is gigantisch groot van binnen en je moet uitkijken dat je niet verdwaald.'
 	document.body.style.backgroundImage = "url('img/skyrim.jpg')";
 }
+function arcane(){
+	console.log("arcane")
+	option1.innerHTML = 'Blijf aanvallen en probeer Guldan te verslaan.'
+	option1.setAttribute("onClick", "javascript:level14();");
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	teksteen.innerHTML = 'Je valt Guldan aan met arcane magic en het bots met de magic van Guldan en zo gaat het duur voor een tijd.'
+	document.body.style.backgroundImage = "url('img/gevecht.jpg')";
+}
+function verassen() {
+	console.log("verassen")
+	document.getElementById('level_title').innerHTML = 'GAME OVER';
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.getElementById('option1').style.visibility = 'hidden';
+	teksteen.innerHTML = 'je probeert Guldan te verassen maar dat gaat fout en Guldan verbrandt je met fel magic.'
+}
+function kijken(){
+	console.log("kijken")
+	option1.innerHTML = 'Val Guldan aan met arcane magic'
+	option1.setAttribute("onClick", "javascript:arcane();");
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	document.body.style.backgroundImage = "url('img/rune.jpg')";
+	teksteen.innerHTML = 'Guldan is bezig om een soort rune te vernietigen en je ziet meerde runes in de kamer.'
 
+}
+function uitdagen(){
+	console.log("uitdagen")
+	option1.innerHTML= 'Kijk in de kamer rond.'
+	option1.setAttribute("onClick", "javascript:level14();");
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+	teksteen.innerHTML = 'je daagt Guldan uit door tegen hem te spreken over zijn voorganger die hier gekomen is een dood is gegaan.'
+}
+function terug(){
+	console.log("game over")
+	document.getElementById('level_title').innerHTML = 'GAME OVER'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('option1').style.visibility = 'hidden'
+	teksteen.innerHTML = 'Je denkt dat je Guldan hebt weggejaagd en gaat weg.'
+	document.body.style.backgroundImage = "url('img/tomb of sargeras 3.jpg')";
+}
+function weg(){
+	console.log("weg")
+	option1.innerHTML = 'Ga terug naar de plek waar Maeiv is.'
+	option1.setAttribute("onClick", "javascript:level15();");
+	teksteen.innerHTML = 'Je probeert een andere weg te vinden maar jij kent de tomb of sargeras niet goed om een weg to vinden.'
+	document.body.style.backgroundImage = "url('img/skyrim2.jpg')";
+	document.getElementById('option3').style.visibility = 'hidden';
+	document.getElementById('option2').style.visibility = 'hidden';
+}
+function runes(){
+	console.log("game over")
+	document.getElementById('level_title').innerHTML = 'GAME OVER'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('option1').style.visibility = 'hidden'
+	teksteen.innerHTML = 'Je probeert de runes te maken maar Guldan ziet dat en verbrandt je. druk op F5 om opnieuw te beginnen.'
+	document.body.style.backgroundImage = "url('img/rune.jpg')";
+}
+function bevriezen(){
+	console.log("game over")
+	document.getElementById('level_title').innerHTML = 'GAME OVER'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('option1').style.visibility = 'hidden'
+	teksteen.innerHTML = 'Je probeert Guldan te bevriezen maar hij maakt het ijs stuk and je word zelf geraakt door een ijs shard. druk op F5 om opnieuw te beginnen.'
+	document.body.style.backgroundImage = "url('img/iceblock.jpg')";
+
+}
+function portaal(){
+	console.log("game over")
+	document.getElementById('level_title').innerHTML = 'GAME EINDE'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('option1').style.visibility = 'hidden'
+	teksteen.innerHTML = 'Jij probeert het portaal te dichten maar het lukt je niet en je probeert te ontsnappen maar wordt gevangengenomen.'
+	document.body.style.backgroundImage = "url('img/broken shore.jpg')";
+}
+function legion(){
+	console.log("game over")
+	document.getElementById('level_title').innerHTML = 'GAME EINDE'
+	document.getElementById('option3').style.visibility = 'hidden'
+	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('option1').style.visibility = 'hidden'
+	teksteen.innerHTML = 'Jij en Maeiv proberen the burning legion tegen te houden maar het zijn er teveel and jullie worden gevangengenomen en azeroth valt in handen van de legion.'
+	document.body.style.backgroundImage = "url('img/burninglegion.jpg')";
+
+}
 function pickup(item) {
 	inventory[item] = true;
 }
