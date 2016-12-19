@@ -230,6 +230,7 @@ function level13() {
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
 	document.getElementById('chase').pause();
+	document.getElementById('titan').play();
 	document.getElementById('option3').style.visibility = 'visible';
 	document.getElementById('option2').style.visibility = 'visible';
 
@@ -249,7 +250,7 @@ function level14() {
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
-	document.getElementById('chase').play();
+	document.getElementById('chase').pause();
 	document.getElementById('option3').style.visibility = 'visible';
 	document.getElementById('option2').style.visibility = 'visible';
 	teksteen.innerHTML = 'Na een tijd vechten verdwijnt Guldan door een onzichtbaarheids spel te casten maar hij gaat door met de runes te vernietigen.'
@@ -267,7 +268,7 @@ function level15() {
 	document.getElementById('tomb').pause();
 	document.getElementById('broken shore').pause();
 	document.getElementById('Nightsong').pause();
-	document.getElementById('chase').play();
+	document.getElementById('chase').pause();
 	document.getElementById('option3').style.visibility = 'visible';
 	document.getElementById('option2').style.visibility = 'visible';
 	teksteen.innerHTML = 'Guldan heeft je uit de ruimte geschoten en de toegang afgesloten maar Maeiv is gekomen maak je nog een kans om hem te stoppen.'
@@ -318,6 +319,7 @@ function level19() {
 	option2.setAttribute("onClick", "javascript:level20();");
 	option3.setAttribute("onClick", "pickup(\"arcanebinding\");")
 	document.body.style.backgroundImage = "url('img/tower2.jpg')";
+	document.getElementById('option3').style.visibility = 'hidden';
 	teksteen.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
 }
 function level20() {
@@ -334,7 +336,9 @@ function level21() {
 	document.getElementById('level_title').innerHTML = 'de warden tower:top';
 	option1.innerHTML = 'ga naar de begane grond weer.';
 	option1.setAttribute("onClick", "javascript:level19();");
-	document.getElementById('option3').style.visibility = 'hidden';
+	option3.innerHTML = 'pak de arcane bindings op.'
+	option3.setAttribute("onClick", "pickup(\"arcanebinding\");")
+	document.getElementById('option3').style.visibility = 'visible';
 	document.getElementById('option2').style.visibility = 'hidden';
 	document.body.style.backgroundImage = "url('img/towervier.jpg')"
 }
@@ -375,6 +379,13 @@ function level24() {
 	option1.innerHTML = 'Knop naar afspeelijst: tomb of sargeras.'
 	document.getElementById('option3').style.visibility = 'hidden'
 	document.getElementById('option2').style.visibility = 'hidden'
+	document.getElementById('tomb').pause();
+	document.getElementById('broken shore').pause();
+	document.getElementById('Nightsong').pause();
+	document.getElementById('chase').pause();
+	document.getElementById('titan').pause();
+	document.getElementById('passages').play();
+	option1.setAttribute("onClick", "javascript:visitPage();");
 	document.body.style.backgroundImage = "url('img/khadgar 2.jpg')"
 }
 function kijkrond() {
@@ -489,7 +500,7 @@ function uitdagen(){
 	option1.setAttribute("onClick", "javascript:level14();");
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
-	teksteen.innerHTML = 'je daagt Guldan uit door tegen hem te spreken over zijn voorganger die hier gekomen is een dood is gegaan.'
+	teksteen.innerHTML = 'je daagt Guldan uit door tegen hem te spreken over zijn voorganger die hier gekomen is een dood is gegaan. Maar hij reageert er niet op en het blijft stil in de kamer.'
 }
 function terug(){
 	console.log("game over")
@@ -550,3 +561,6 @@ function legion(){
 function pickup(item) {
 	inventory[item] = true;
 }
+function visitPage(){
+        window.location='https://www.youtube.com/playlist?list=PLY0KbDiiFYeN_XZFaHNPzks2bBZPMIeKU';
+    }
