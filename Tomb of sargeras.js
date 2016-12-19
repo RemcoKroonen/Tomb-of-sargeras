@@ -18,7 +18,7 @@ console.log(document.getElementById('option2').onclick);
 
 
 function level1() {
-	console.log("Level1()");
+	console.log("Level1");
 	option3.style.visibility = 'visible';
 	document.getElementById('level_title').innerHTML = 'level 1: De broken shore';
 	
@@ -28,7 +28,7 @@ function level1() {
 
 	console.log(document.getElementById('option2').onclick);
 	document.body.style.backgroundImage = "url('img/screenshot2.jpg')";
-	teksteen.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraak. je moet hem nu vinden en stoppen';
+	teksttwee.innerHTML = 'Het is je gelukt Guldan te volgen tot de broken shore maar toen ben je zijn spoor kwijt geraak. je moet hem nu vinden en stoppen';
 	document.getElementById('option2').style.visibility = 'visible';
 	option3.setAttribute("onClick", "javascript:level2();");
 	option2.setAttribute("onClick", "javascript:level7();");
@@ -43,7 +43,7 @@ function level1() {
 }
 
 function level2() {
-	console.log("Level2()");
+	console.log("Level2");
 	document.getElementById('level_title').innerHTML = 'level 2: the wardens and the archmage';
 	document.body.style.backgroundImage = "url('img/warden tower.jpg')";
 	document.getElementById('option2').style.visibility = 'visible';
@@ -65,7 +65,7 @@ function level2() {
 }
 
 function level3() {
-	console.log("Level3()");
+	console.log("Level3");
 	if (inventory.arcanebinding) {
 	document.getElementById('level_title').innerHTML = 'level 3: Samenwerkenen?';
 	document.body.style.backgroundImage = "url('img/Khadgar 1.jpg')";
@@ -90,7 +90,7 @@ function noggeenarcane() {
 }
 
 function level4() {
-	console.log("Level4())");
+	console.log("Level4");
 	document.getElementById('level_title').innerHTML = 'level 4: Een plan';
 
 	option1.innerHTML = 'Vraag of de wardens het eiland gescout hebben';
@@ -106,7 +106,7 @@ function level4() {
 	document.body.style.backgroundImage = "url('img/Khadgar 1.jpg')";
 }
 function level5() {
-	console.log("Level5())");
+	console.log("Level5");
 	document.getElementById('level_title').innerHTML = 'level 4: Scout report';
 	teksteen.innerHTML = 'De wardens hebben het brandde wrak van het schip gevonden en een paar dode nightfallen maar zij vinden het geen teken dat Guldan hier is.';
 	/*alert("Praat weer met de wardens");*/
@@ -119,7 +119,7 @@ function level5() {
 
 }
 function level6() {
-	console.log("game over()");
+	console.log("game over");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	teksteen.innerHTML = 'Je zegt niks en de wardens verlaten je zonder iets te zeggen. Je bent niks te weten gekomen over guldan and kan hem niet vinden. druk op F5 om opnieuw te beginnen.';
 	document.getElementById('option3').style.visibility = 'hidden';
@@ -138,7 +138,7 @@ function uitleg() {
 	teksttwee.innerHTML = 'Je doel is om de kwade warlock Guldan te vinden en te verslaan om Azerot te redden. Jij(Archmage Khadgar) Moet spullen vinden, rond kijken en voor allies zoeken.';
 
 function level7() {
-	console.log("game over()");
+	console.log("game over");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	teksteen.innerHTML = 'Je kijkt rond op de broken shore maar je kijkt niet goed uit en wordt aangevallen door verschillende monsters en sterft. druk op F5 om opnieuw te beginnen.';
 	document.getElementById('option3').style.visibility = 'hidden';
@@ -146,7 +146,7 @@ function level7() {
 	document.getElementById('option1').style.visibility = 'hidden';
 }
 function level8() {
-	console.log("game over()");
+	console.log("game over");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	teksteen.innerHTML = 'Je checkt of de tomb of sargeras nog steeds dicht is maar je verspilde je tijd daar en guldan is ontsnapt.';
 	document.getElementById('option3').style.visibility = 'hidden';
@@ -157,7 +157,7 @@ function level8() {
 }
 
 function level9() {
-	console.log("Level9()");
+	console.log("Level9");
 	document.getElementById('level_title').innerHTML = 'level 5: Wat nu';
 
 	option1.innerHTML = 'Probeer een plan te bedenken met de wardens om Guldan te vinden.';
@@ -170,7 +170,7 @@ function level9() {
 	teksteen.innerHTML = 'De rest van de wardens blijk je aankijken terwijl je met Maeiv praat.';
 }
 function level10() {
-	console.log("Level10()");
+	console.log("Level10");
 	document.getElementById('level_title').innerHTML = 'level 6: geen hulp of nieuws';
 
 	option1.innerHTML = 'Probeer Maeiv Shadowsong te overtuigen om te helpen.';
@@ -183,7 +183,7 @@ function level10() {
 
 }
 function level11() {
-	console.log("Level11()");
+	console.log("Level11");
 	document.getElementById('level_title').innerHTML = 'level 7: the chase begins';
 	option1.innerHTML = 'Ga de tomb in.';
 	option2.innerHTML = 'Kijk naar de stukken van de ingang voor aanwijzingen';
@@ -200,7 +200,7 @@ function level11() {
 
 }
 function level12() {
-	console.log("Level12()");
+	console.log("Level12");
 	document.getElementById('level_title').innerHTML = 'level 8: het pad';
 	option1.innerHTML = 'Kijk rond voor sporen van Guldan';
 	option2.innerHTML = 'Kijk rond in the tomb of sargeras';
@@ -218,7 +218,7 @@ function level12() {
 	document.body.style.backgroundImage = "url('img/sargeras.png')";
 }
 function level13() {
-	console.log("Level13()");
+	console.log("Level13");
 	document.getElementById('level_title').innerHTML = 'level 9: het duel';
 	option1.innerHTML = 'Val Guldan met arcane magic aan.'
 	option2.innerHTML = 'Kijk wat Guldan aan het doen is.'
@@ -239,7 +239,7 @@ function level13() {
 	//eerste game naar 3 raak naar level 10//
 }
 function level14() {
-	console.log("Level14()");
+	console.log("Level14");
 	document.getElementById('level_title').innerHTML = 'level 10: uitleg';
 	option1.innerHTML = 'Daag Guldan uit.';
 	option2.innerHTML = 'Ga terug naar buiten.';
@@ -257,7 +257,7 @@ function level14() {
 	document.body.style.backgroundImage = "url('img/insidetomb.jpg')";
 }
 function level15() {
-	console.log("Level15()");
+	console.log("Level15");
 	document.getElementById('level_title').innerHTML = 'level 11: verloren?';
 	option1.innerHTML = 'Vraag Maeiv waarom ze terug is gekomen.';
 	option2.innerHTML = 'Probeer een ander pad te vinden naar Guldan';
@@ -275,7 +275,7 @@ function level15() {
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 }
 function level16() {
-	console.log("Level16()");
+	console.log("Level16");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
@@ -285,7 +285,7 @@ function level16() {
 
 }
 function level17() {
-	console.log("Level17()");
+	console.log("Level17");
 	document.getElementById('level_title').innerHTML = 'GAME OVER';
 	document.getElementById('option3').style.visibility = 'hidden';
 	document.getElementById('option2').style.visibility = 'hidden';
@@ -294,7 +294,7 @@ function level17() {
 	teksteen.innerHTML = 'Je geeft het op en trekt terug naar de stad dalaran en guldan ontsnapt.'
 }
 function level18() {
-	console.log("Level18()");
+	console.log("Level18");
 	document.getElementById('level_title').innerHTML = 'level 12:The warden'
 	document.body.style.backgroundImage = "url('img/shadowsong.jpg')";
 	option1.innerHTML = 'Volg Maeiv terug naar Guldan.'
@@ -310,7 +310,7 @@ function level18() {
 
 }
 function level19() {
-	console.log("Level19()");
+	console.log("Level19");
 	document.getElementById('level_title').innerHTML = 'de warden tower';
 	option1.innerHTML = 'Ga terug naar buiten';
 	option2.innerHTML = 'ga de trap op.';
@@ -323,7 +323,7 @@ function level19() {
 	teksteen.innerHTML = 'Als je de tower binnen gaat zie je een paar kisten met spullen erin.'
 }
 function level20() {
-	console.log("Level20()");
+	console.log("Level20");
 	document.getElementById('level_title').innerHTML = 'de warden tower:trap';
 	option1.innerHTML = 'ga naar de top.';
 	option2.innerHTML = 'ga naar de begane grond weer.';
@@ -332,7 +332,7 @@ function level20() {
 	document.body.style.backgroundImage = "url('img/trap.jpg')";
 }
 function level21() {
-	console.log("Level21()");
+	console.log("Level21");
 	document.getElementById('level_title').innerHTML = 'de warden tower:top';
 	option1.innerHTML = 'ga naar de begane grond weer.';
 	option1.setAttribute("onClick", "javascript:level19();");
@@ -343,7 +343,7 @@ function level21() {
 	document.body.style.backgroundImage = "url('img/towervier.jpg')"
 }
 function level22() {
-	console.log("Level22()");
+	console.log("Level22");
 	document.getElementById('level_title').innerHTML = 'level 13:alles of niets'
 	option1.innerHTML = 'Kijk of je de runes weer kan maken.'
 	option2.innerHTML = 'Blijf door vechten.'
@@ -359,7 +359,7 @@ function level22() {
 
 }
 function level23() {
-	console.log("Level23()");
+	console.log("Level23");
 	document.getElementById('level_title').innerHTML = 'level 14:ontsnappen, gewonnen maar ook deels verloren'
 	document.body.style.backgroundImage = "url('img/tomb.jpg')"
 	option1.innerHTML = 'Ontsnap en waarschuw de leiders van azeroth.'
@@ -373,7 +373,7 @@ function level23() {
 
 
 function level24() {
-	console.log("Level24()");
+	console.log("Level24");
 	document.getElementById('level_title').innerHTML = 'Credits'
 	teksteen.innerHTML = 'De leiders van azeroth zijn gewaarschuwed.Bedankt voor het proberen/spelen van mijn adventure game. deze game is gebaseerd op het audio drama van blizzard ent. Ik heb het verhaal verkort om het niet te lang te maken. De button die nog over is gaat de afspeelijst als het hele verhaal wilt horen.'
 	option1.innerHTML = 'Knop naar afspeelijst: tomb of sargeras.'
