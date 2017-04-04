@@ -8,13 +8,13 @@ var teksteen = document.getElementById('teksteen');
 var teksttwee =	document.getElementById('teksttwee');
 var tekstdrie = document.getElementById('tekstdrie');
 
+
 document.getElementById('option1').innerHTML = 'level1';
 document.getElementById('level_title').innerHTML = 'Start';
 document.getElementById('option2').innerHTML= 'uitleg';
 document.getElementById('option3').style.visibility = 'hidden';
 document.getElementById('option3').innerHTML = 'level2';
 console.log(document.getElementById('option2').onclick);
-
 
 
 function level1() {
